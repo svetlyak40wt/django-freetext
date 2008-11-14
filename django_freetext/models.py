@@ -7,13 +7,9 @@ class FreeText(models.Model):
     any template with the use of a special template
     tag
     """
-    key = models.CharField('key', help_text="A unique name for this FreeText of content", blank=False, maxlength=255, unique=True)
+    key = models.CharField('key', help_text="A unique name for this FreeText of content", blank=False, max_length=255, unique=True)
     content = models.TextField('content', blank=True)
     active = models.BooleanField("active", default=False)
-
-    class Admin:
-        list_display = ('key','active')
-        search_fields = ('key', 'content')
 
     class Meta:
         verbose_name = 'free text'
