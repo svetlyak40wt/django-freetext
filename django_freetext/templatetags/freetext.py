@@ -4,7 +4,7 @@ from django.core.cache import cache
 
 register = template.Library()
 
-FreeText = models.get_model('freetext', 'freetext')
+FreeText = models.get_model('django_freetext', 'freetext')
 CACHE_PREFIX = "freetext_"
 
 def do_get_freetext(parser, token):
